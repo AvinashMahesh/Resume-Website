@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Avinash Mahesh's Resume</title>
+    <link rel="stylesheet" href="index.css">
+    <p>Visitor Count: <span id="visitorCount"></span></p>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header, .section {
+            margin-bottom: 20px;
+        }
+        .section-title {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Avinash Mahesh</h1>
+        <p>New York Metropolitan Area | (732)-318-5242 | avinash.mahesh3@gmail.com | linkedin.com/in/avinash-mahesh/</p>
+    </div>
+
+    <div class="section education">
+        <h2 class="section-title">EDUCATION</h2>
+        <p>Purdue University, West Lafayette, IN</p>
+        <p>Graduation: May 2025</p>
+        <p>Bachelor of Science in Computer Science; Minor in Mathematics</p>
+        <p>Tracks/Concentration: Machine Learning and Software Engineering</p>
+        <p>Relevant Coursework: Data Structures and Algorithms, Computer Architecture, Object-Oriented Programming (Java, Python, C++), Multivariate Calculus, Programming in C, Linear Algebra, and Discrete Mathematics</p>
+    </div>
+
+    <div class="section work-experience">
+        <h2 class="section-title">WORK EXPERIENCE</h2>
+
+        <div class="job">
+            <h3>Software Engineer Intern - Country Financial, Bloomington, IL</h3>
+            <p>May 2023 - August 2023</p>
+            <ul>
+                <li>Implemented web scraping techniques using Python libraries (e.g., Beautiful Soup, Selenium) to extract relevant property data, including square footage,
+                    number of bedrooms/bathrooms, and property location details to accurately calculate the replacement cost of a home based on physical and geographical properties.</li>
+                <li>Integrated the web scraping project with an existing insurance quoting system, automating the process of gathering property
+                    details and seamlessly incorporating replacement cost calculations into the quoting workflow.</li>
+                <li>Contributed to the development of machine learning models for predictive analytics, resulting in a 10% improvement in pricing accuracy and a reduction in risk exposure.</li>
+                <li>Conducted in-depth data analysis on large datasets (100,000+ entries) using SQL and Tableau, identifying trends and patterns to optimize product performance and increase conversion rates.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <h3>Purdue Data Mine Software Engineer Intern - Raytheon Technologies, West Lafayette, IN</h3>
+            <p>August 2023 - December 2023</p>
+            <ul>
+                <li>Utilized health sensor data sets to train predictive models to calculate the Remaining Useful Life (RUL) of key system components of military aircraft and land vehicles.</li>
+                <li>DIntegrated Machine Learning and analytics built from Natural Language Processing into a dashboard that will be searched for and used by Raytheon’s Technology Leaders.</li>
+                <li>Worked on agile development teams, actively participating in daily stand-ups, sprint planning, and retrospectives.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <h3>Purdue Data Mine Machine Learning Researcher - Elanco, West Lafayette, IN</h3>
+            <p>August 2022 - May 2023</p>
+            <ul>
+                <li>Enabled in-home pet identification and diagnostics using computer vision AI systems.</li>
+                <li>Executed Pose Estimation to track key points and locations of animals in videos using MMPose and DeepLabCut.</li>
+                <li>Ran automated workflow for processing 20,000+ images on cluster to devise a data-frame for analytics.</li>
+                <li>Performed domestic canine breed identification, key point/feature detection, detect bounding boxes, and assess behavioral classifiers on a dataset of over 1,000 videos and images.</li>
+                <li>Assessed algorithm accuracy for breed identification and object detection through PyTorch and YOLO-V5.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="section projects">
+        <h2 class="section-title">PROJECTS</h2>
+        <div>
+            <h3>Video Conferencing App | JavaScript, NodeJS, CSS</h3>
+            <ul>
+                <li>Developed a real-time video chat application using JavaScript, Node.js, PeerJS, WebRTC, and Socket.io, enabling seamless communication over the web.</li>
+                <li>Created and configured the server-side logic using Express.js, establishing a minimalist web framework for Node.js, and facilitated access to static files for improved user experience.</li>
+                <li>Implemented unique room generation with UUIDs, allowing users to join distinct video chat rooms and share their live video streams with others in a secure and efficient manner.</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Image Color Detection | Python</h3>
+            <ul>
+                <li>Python program that utilizes the computer vision libraries OpenCV and Pandas to identify and label colors in images.</li>
+                <li>Each color is determined by their RBG values and its corresponding name in the dataset represented by a CSV file.</li>
+                <li>Users can input any image into the algorithm and click anywhere on the image to display its color and RGB value.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section skills">
+        <h2 class="section-title">SKILLS</h2>
+        <ul>
+            <li>Programming Languages: Java, Python, C, C++, JavaScript, TypeScript, R, HTML/CSS, SQL</li>
+            <li>Tools/Frameworks: NodeJS, PyTorch, OpenCV, Pandas, NumPy, Matplotlib, Selenium, Beautiful Soap, NoSQL, Tableau, Ursina Engine, Microsoft Excel, Git, GitHub, Agile, Communication, Linux, Full-Stack Development</li>
+        </ul>
+    </div>
+
+</body>
+
+<script>
+    // Function to get the visitor count
+    function getVisitorCount() {
+        // Try to get the count from localStorage
+        let count = localStorage.getItem("visitorCount");
+
+        // If it's not there, initialize it to 0
+        if (count === null) {
+            count = 0;
+        }
+
+        // Return the count as a number
+        return parseInt(count);
+    }
+
+    // Function to update the visitor count
+    function updateVisitorCount() {
+        // Get the current count
+        let count = getVisitorCount();
+
+        // Increment the count
+        count++;
+
+        // Save the updated count to localStorage
+        localStorage.setItem("visitorCount", count.toString());
+
+        // Update the count display on the webpage
+        document.getElementById("visitorCount").textContent = count;
+    }
+
+    // Update the visitor count when the page loads
+    document.addEventListener("DOMContentLoaded", updateVisitorCount);
+</script>
+
+</html>
